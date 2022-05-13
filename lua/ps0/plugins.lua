@@ -40,6 +40,8 @@ return packer.startup(function(use)
     -- plugins goes here
     use "wbthomason/packer.nvim"
     use "nvim-lua/plenary.nvim"
+    use "navarasu/onedark.nvim"
+    use "olimorris/onedarkpro.nvim"
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()
