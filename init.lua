@@ -8,3 +8,4 @@ require "ps0.treesitter"
 require "ps0.telescope"
 require "ps0.nvim_tree"
 require "ps0.onedarkpro"
+require("impatient")

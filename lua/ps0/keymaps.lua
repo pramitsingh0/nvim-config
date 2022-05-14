@@ -9,11 +9,12 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Navigate through buffers
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
-
+keymap("n", "<A-h>", "<C-w>h", opts)
+keymap("n", "<A-j>", "<C-w>j", opts)
+keymap("n", "<A-k>", "<C-w>k", opts)
+keymap("n", "<A-l>", "<C-w>l", opts)
+keymap("n", "sh", ":split<cr>", opts)
+keymap("n", "sv", ":vsplit<cr>", opts)
 
 -- Resize buffer with arrows
 

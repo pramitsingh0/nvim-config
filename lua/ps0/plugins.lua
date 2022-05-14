@@ -73,6 +73,9 @@ return packer.startup(function(use)
         },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
+        -- Is using a standard Neovim install, i.e. built from source or using a
+    -- provided appimage.
+    use 'lewis6991/impatient.nvim'
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
