@@ -40,9 +40,39 @@ return packer.startup(function(use)
     -- plugins goes here
     use "wbthomason/packer.nvim"
     use "nvim-lua/plenary.nvim"
+    -- colorschemes
     use "navarasu/onedark.nvim"
     use "olimorris/onedarkpro.nvim"
+    -- If you are using Packer
+    use 'marko-cerovac/material.nvim'
 
+    -- cmp plugins
+    use "hrsh7th/nvim-cmp"
+    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/cmp-path"
+    use "hrsh7th/cmp-cmdline"
+    use "hrsh7th/cmp-nvim-lsp"
+    use "saadparwaiz1/cmp_luasnip"
+    
+    -- Code Snippets
+    use "L3MON4D3/LuaSnip"
+    use "rafamadriz/friendly-snippets"
+
+    -- LSP
+    use "neovim/nvim-lspconfig"
+    use "williamboman/nvim-lsp-installer"
+    use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+
+    -- fuzzy finder
+    use "nvim-telescope/telescope.nvim"
+
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = {
+          'kyazdani42/nvim-web-devicons', -- optional, for file icon
+        },
+        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end

@@ -8,6 +8,7 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Navigate through buffers
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
@@ -41,3 +42,12 @@ keymap("n", "<leader>k", ":m .-2<CR>==", opts)
 
 -- retain word after paste
 keymap("v", "p", '"_dP', opts)
+
+-- Close a buffer
+keymap("n", "<leader>x", ":close<CR>", opts)
+
+-- Fuzzy finder
+keymap("n", "<leader>ff", "<cmd> :Telescope find_files <cr>", opts)
+keymap("n", "<leader>lg", "<cmd> :Telescope live_grep <cr>", opts)
+
+keymap("n", "<leader>fe", ":NvimTreeToggle<CR>", opts)

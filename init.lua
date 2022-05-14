@@ -1,5 +1,10 @@
+require "ps0.lsp"
 require "ps0.options"
 require "ps0.keymaps"
 require "ps0.plugins"
-require "ps0.onedark"
-
+-- require "ps0.onedark"
+require "ps0.cmp"
+require "ps0.treesitter"
+require "ps0.telescope"
+require "ps0.nvim_tree"
+require "ps0.onedarkpro"

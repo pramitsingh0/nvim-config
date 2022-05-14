@@ -32,4 +32,6 @@ vim.cmd([[
     filetype on
     filetype plugin indent on
     set iskeyword+=-
+    syntax on
 ]])
+
