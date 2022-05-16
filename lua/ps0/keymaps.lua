@@ -50,5 +50,11 @@ keymap("n", "<leader>x", ":close<CR>", opts)
 -- Fuzzy finder
 keymap("n", "<leader>ff", "<cmd> :Telescope find_files <cr>", opts)
 keymap("n", "<leader>lg", "<cmd> :Telescope live_grep <cr>", opts)
-
 keymap("n", "<leader>fe", ":NvimTreeToggle<CR>", opts)
+
+keymap("v", "<leader>y", '"+y', opts)
+keymap("v", "<leader>p", '"+p', opts)
+
+keymap("n", "<leader>q", ":Bdelete<CR>", opts)
+
+keymap("n", "<C-\\>", ":ToggleTerm<CR>", opts)

@@ -22,8 +22,8 @@ cmp.setup({
         end,
     },
     window = {
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
+        completion = true,
+        documentation = true,
     },
     mapping = cmp.config.mapping.preset.insert({
         ["<C-k>"] = cmp.mapping.select_prev_item(),

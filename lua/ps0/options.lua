@@ -1,5 +1,4 @@
 vim.opt.backup = false
-vim.opt.clipboard = "unnamedplus"
 vim.opt.completeopt = { "menuone", "noselect" }
 vim.opt.conceallevel = 0
 vim.opt.fileencoding = "utf-8"
@@ -33,5 +32,7 @@ vim.cmd([[
     filetype plugin indent on
     set iskeyword+=-
     syntax on
+    set clipboard+=unnamedplus
+    set signcolumn=number
 ]])
 

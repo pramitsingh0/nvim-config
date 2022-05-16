@@ -1,5 +1,6 @@
 local status, telescope = pcall(require, "telescope")
 if not status then
+    print("nvim telescope not found. Install nvim telescope")
     return
 end
 

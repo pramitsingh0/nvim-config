@@ -24,4 +24,11 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = true,
   },
+  context_commentstring = {
+      enable = true,
+      enable_autocmd = false,
+  },
+  autopairs = {
+      enable = true
+  }
 }

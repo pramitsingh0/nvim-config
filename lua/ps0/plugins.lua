@@ -25,6 +25,7 @@ vim.cmd [[
 -- Catch errors
 local status, packer = pcall(require, "packer")
 if not status then
+    print("packer not found. Install packer")
     return
 end
 packer.init {
@@ -33,13 +34,14 @@ packer.init {
         return require("packer.util").float { border = 'rounded' }
         end,
     },
-} 
+}
 
 -- Plugins Install
 return packer.startup(function(use)
     -- plugins goes here
     use "wbthomason/packer.nvim"
     use "nvim-lua/plenary.nvim"
+    use "lukas-reineke/indent-blankline.nvim"
     -- colorschemes
     use "navarasu/onedark.nvim"
     use "olimorris/onedarkpro.nvim"
@@ -53,7 +55,7 @@ return packer.startup(function(use)
     use "hrsh7th/cmp-cmdline"
     use "hrsh7th/cmp-nvim-lsp"
     use "saadparwaiz1/cmp_luasnip"
-    
+    use "windwp/nvim-autopairs"
     -- Code Snippets
     use "L3MON4D3/LuaSnip"
     use "rafamadriz/friendly-snippets"
@@ -76,6 +78,23 @@ return packer.startup(function(use)
         -- Is using a standard Neovim install, i.e. built from source or using a
     -- provided appimage.
     use 'lewis6991/impatient.nvim'
+
+    -- Comments
+    use "numToStr/Comment.nvim"
+    use "JoosepAlviste/nvim-ts-context-commentstring"
+    -- use "lewis6991/gitsigns.nvim"
+    --
+    -- bufferline
+    use "akinsho/bufferline.nvim"
+    use "moll/vim-bbye"
+    -- lualine
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+
+    -- terminal
+    use {"akinsho/toggleterm.nvim", tag = 'v1.*'}
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
