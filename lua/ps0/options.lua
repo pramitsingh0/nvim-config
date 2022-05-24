@@ -34,5 +34,6 @@ vim.cmd([[
     syntax on
     set clipboard+=unnamedplus
     set signcolumn=number
+    let g:python_host_prog = '/usr/bin/python3'
 ]])
 

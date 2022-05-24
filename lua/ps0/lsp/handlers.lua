@@ -80,7 +80,7 @@ local function lsp_keymaps(bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>f', '<cmd>lua vim.lsp.buf.format { async = true }<CR>', opts)
-    vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting_sync()' ]]
+    vim.cmd [[ command! Format execute 'lua vim.lsp.buf.format {async = true}' ]]
 end
 
 M.on_attach = function(client, bufnr)

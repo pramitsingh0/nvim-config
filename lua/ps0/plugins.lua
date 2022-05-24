@@ -44,8 +44,6 @@ return packer.startup(function(use)
     use "lukas-reineke/indent-blankline.nvim"
     -- colorschemes
     use "navarasu/onedark.nvim"
-    use "olimorris/onedarkpro.nvim"
-    -- If you are using Packer
     use 'marko-cerovac/material.nvim'
 
     -- cmp plugins
@@ -95,6 +93,9 @@ return packer.startup(function(use)
 
     -- terminal
     use {"akinsho/toggleterm.nvim", tag = 'v1.*'}
+
+    use 'norcalli/nvim-colorizer.lua'
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
